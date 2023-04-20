@@ -44,6 +44,7 @@ namespace Galery
                 galleryContext.Paints.Update(Paint.IdPaintNavigation);
                 galleryContext.Creators.Update(Paint.IdCreatorNavigation);
             galleryContext.SaveChanges();
+            //что-то
         }
     }
 }
