@@ -22,7 +22,7 @@
                 <ComboBox                     
                     DisplayMemberPath="Name" 
                     ItemsSource="{Binding Creators}"
-                    SelectedItem="{Binding Paint.IdPaintNavigation.GenreNavigation.Creators.Name}" 
+                    SelectedItem="{Binding Paint.IdPaintNavigation.GenreNavigation.Creators}" 
                     Width="150" Height="25"/>
                 <TextBlock Text="Дата создания" FontSize="15" HorizontalAlignment="Center"/>
                 <TextBox Text="{Binding Paint.IdPaintNavigation.DateOfCreate}" Height="25"/>
