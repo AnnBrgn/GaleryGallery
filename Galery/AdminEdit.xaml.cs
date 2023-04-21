@@ -23,6 +23,7 @@ namespace Galery
 
         public List<Genre> Genres { get; set; }
         public List<Time> Times { get; set; }
+        public List<Creator> Creators { get; set; }
         
         public Crosscreatorpaint Paint { get; }
 
@@ -32,6 +33,7 @@ namespace Galery
             GalleryContext galleryContext = new GalleryContext();
             Genres = galleryContext.Genres.ToList();
             Times = galleryContext.Times.ToList();
+            Creators = galleryContext.Creators.ToList();
             Paint = paint;
             DataContext = this;
         }

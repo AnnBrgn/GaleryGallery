@@ -19,13 +19,24 @@
         <Border  Grid.RowSpan="2" Grid.Column="1" BorderThickness="1" BorderBrush="Gray" Margin="8" Padding="5">
             <StackPanel Grid.Column="1" HorizontalAlignment="Center">
                 <TextBlock Text="Художник" FontSize="15" HorizontalAlignment="Center"/>
-                <TextBox Text="{Binding Paint.IdCreatorNavigation.Name}" Width="150" Height="25"/>
+                <ComboBox                     
+                    DisplayMemberPath="Name" 
+                    ItemsSource="{Binding Creators}"
+                    SelectedItem="{Binding Paint.IdPaintNavigation.GenreNavigation.Creators.Name}" 
+                    Width="150" Height="25"/>
                 <TextBlock Text="Дата создания" FontSize="15" HorizontalAlignment="Center"/>
                 <TextBox Text="{Binding Paint.IdPaintNavigation.DateOfCreate}" Height="25"/>
                 <TextBlock Text="Жанр" FontSize="15" HorizontalAlignment="Center"/>
-                <ComboBox DisplayMemberPath="Genre1" ItemsSource="{Binding Genres}" SelectedItem="{Binding Paint.IdPaintNavigation.GenreNavigation.Genre}" Height="25"/>
+                <ComboBox 
+                    DisplayMemberPath="Genre1" 
+                    ItemsSource="{Binding Genres}" 
+                    SelectedItem="{Binding Paint.IdPaintNavigation.GenreNavigation}" 
+                    Height="25"/>
                 <TextBlock Text="Период" FontSize="15" HorizontalAlignment="Center"/>
-                <ComboBox DisplayMemberPath="Time1" ItemsSource="{Binding Times}"  SelectedItem="{Binding Paint.IdPaintNavigation.TimeNavigation.Time}" Height="25"/>
+                <ComboBox 
+                    DisplayMemberPath="Time1" 
+                    ItemsSource="{Binding Times}" 
+                    SelectedItem="{Binding Paint.IdPaintNavigation.TimeNavigation}" Height="25"/>
                 <TextBlock Text="Местоположение" FontSize="15" HorizontalAlignment="Center"/>
                 <TextBox Text="{Binding Paint.IdPaintNavigation.Location}" Height="25"/>
                 <TextBlock Text="Материал" FontSize="15" HorizontalAlignment="Center"/>
